@@ -10,7 +10,7 @@ class SNode {
 };
 
 template<typename E>
-class SlinkedList {
+class SLinkedList {
     private:
         SNode<E>* head;
     public:
@@ -20,6 +20,6 @@ class SlinkedList {
         const E& front() const;
         void addFront(const E& e);
         void removeFront();
-}
+};
 
 #endif
