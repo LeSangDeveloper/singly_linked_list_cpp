@@ -1,4 +1,7 @@
 #include"singly_linked_list.h"
+#include <cstddef>
+
+using namespace std;
 
 template <typename E>
 SLinkedList<E>::SLinkedList()
@@ -15,16 +18,16 @@ bool SLinkedList<E>::empty() const {
 }
 
 template <typename E>
-void addFront(const E& e) {
+void SLinkedList<E>::addFront(const E& e) {
     SNode<E>* v = new SNode<E>;
-    v−>elem = e;
-    v−>next = head;
+    v->elem = e;
+    v->next = head;
     head = v;
 }
 
 template <typename E>
 void SLinkedList<E>::removeFront() {
     SNode<E>* old = head;
-    head = old−>next;
+    head = old->next;
     delete old;
 }
