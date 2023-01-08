@@ -1,5 +1,7 @@
 #include"singly_linked_list.h"
-#include <cstddef>
+
+#include<cstddef>
+#include<string>
 
 using namespace std;
 
@@ -31,3 +33,13 @@ void SLinkedList<E>::removeFront() {
     head = old->next;
     delete old;
 }
+
+template <typename E>
+const E& SLinkedList<E>::front() const {
+    return head->elem;
+}
+
+template class SLinkedList<int>;
+template class SLinkedList<double>;
+template class SLinkedList<float>;
+template class SLinkedList<string>;
